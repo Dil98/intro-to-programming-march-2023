@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace Banking.UnitTests
+namespace Banking.UnitTests;
+public class GoldCustomersDeposit
 {
-    internal class GoldCustomersDeposit
-    {
+    [Fact]
+
+    public void GoldCustomersGetABonusOnDeposits()
+    { 
+      
+    
+    Assert.True(false);
     }
 }
+
