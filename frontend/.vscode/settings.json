@@ -25,4 +25,8 @@
 
   "explorer.confirmDelete": false,
   "eslint.quiet": false
-}
+},
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"[javascript]": {
+ "editor.defaultFormatter": "esbenp.prettier-vscode"
+ }
