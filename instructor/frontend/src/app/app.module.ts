@@ -9,6 +9,11 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { SupportComponent } from './components/support/support.component';
 import { HttpClientModule } from '@angular/common/http';
 import { OnCallDataService } from './services/oncall-data.service';
+import { CounterModule } from './features/counter/counter.module';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './state';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +22,15 @@ import { OnCallDataService } from './services/oncall-data.service';
     NavigationComponent,
     SupportComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    CounterModule,
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument(), // this is the HAWTNESS for development.
+    EffectsModule.forRoot([]),
+  ],
   providers: [OnCallDataService],
   bootstrap: [AppComponent],
 })
